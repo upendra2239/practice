@@ -7,7 +7,7 @@ public class SwitchCase {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int result;
+		int result=0;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter a:");
@@ -57,16 +57,7 @@ public class SwitchCase {
 		}
 		
 		
-		System.out.println("Switch case using Java 8");
-		
-		result = switch(key) {
-		case 1 -> a+b;
-		case 2 -> a-b;
-		case 3 -> a*b;
-		case 4 -> a/b;
-		case 5 -> a%b;
-		default -> 0;
-		};
+
 		
 		System.out.println("result:"+result);
 	}

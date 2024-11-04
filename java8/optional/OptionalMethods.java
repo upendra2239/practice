@@ -20,7 +20,7 @@ public class OptionalMethods {
 		Optional<String> value1 = Optional.ofNullable(str[3]);
 		System.out.println(value1);
 		
-		System.out.println(value.get());
+		System.out.println(value1.get());
 		
 		System.out.println(value.hashCode());
 		

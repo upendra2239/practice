@@ -1,5 +1,6 @@
 package java8.Streams;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class IntermediateMethods {
 
 	public static void main(String[] args) {
 
-	      List<Integer> intList = List.of(15,20,48,63,49,27,56,32,9,15,20,56);
+	      List<Integer> intList = Arrays.asList(15,20,48,63,49,27,56,32,9,15,20,56);
 	      
 	      System.out.println("filter");
 	      //filter
