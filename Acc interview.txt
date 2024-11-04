@@ -1,0 +1,265 @@
+
+project flow:
+
+Axon sends events from frontend 
+event handlers consumes this events
+service sends data in jason format to elastic db
+
+a report of total transactions happended in the day will be generated
+
+Challenge i faced:
+
+we used to get data for eo class using  Select * from the table
+this caused timeouts while dealing with retrieval of large records
+so, I have written a DAO interface to get only the required columns
+this reduced the record retrieval time
+
+
+
+
+
+
+git rebase - allows you to move or combine a sequence of commits to a new base commit.
+
+
+
+
+5 exceptions of Spring Boot?
+
+
+BeansException: Base class for all exceptions thrown during the bean creation process.
+
+BeanCreationException: Thrown when a bean cannot be created or initialized.
+
+BeanCurrentlyInCreationException: Thrown when a bean is currently in creation and another request is made to create the same bean.
+
+BeanDefinitionStoreException: Thrown when there is an issue with the bean definition, such as parsing errors in XML configuration.
+
+FactoryBeanNotInitializedException: Thrown when attempting to access an uninitialized FactoryBean.
+
+DataAccessException: Base class for exceptions thrown by Spring's data access classes.
+
+CannotAcquireLockException: Thrown when a database lock cannot be acquired.
+
+DuplicateKeyException: Thrown when an attempt to insert or update a record results in a duplicate key violation.
+
+EmptyResultDataAccessException: Thrown when a result was expected to have at least one row but zero rows were returned.
+
+
+
+
+5 annotations which doesn't belongs to stereotype?
+
+
+Stereotype annotations, such as @Component, @Service, @Repository, and @Controller,@Configurtion are used to indicate the roles of classes in the Spring application context.
+
+
+Here are five annotations that are commonly used in Spring Boot but do not belong to the stereotype category:
+
+@Autowired:
+
+Purpose: Used to automatically inject dependencies into a Spring bean.
+
+
+@RequestMapping:
+
+Purpose: Used to map HTTP requests to handler methods of a controller class.
+
+
+@Value:
+
+Purpose: Used to inject values from properties files, environment variables, or system properties into Spring beans.
+
+
+@Transactional:
+
+Purpose: Used to annotate methods or classes to indicate that a transaction boundary should be established around them.
+
+
+Spring controller with all methods and endpoints:
+
+https://chatgpt.com/c/6719f179-c40c-8010-8181-779567474fd4
+
+
+
+code: given a string given the first non repeating character using stream functions.
+
+eclipse practice - FirstNonRepeatingCharInAString
+
+
+
+
+junit @spy
+
+
+The @Spy annotation in Mockito empowers developers to create partial mocks effortlessly, which can be incredibly beneficial in scenarios where only specific methods of a real object need to be mocked.
+
+While the @Mock annotation creates a complete mock, the @Spy annotation creates a "partial mock." With a partial mock, you can mock only specific methods of a real object, while other methods will retain their original behavior.
+
+ 
+
+
+
+dynamic binding - java learning page 10
+
+
+
+final and finalize - java learning page 36
+
+
+
+garbage collector - java learning page 11
+
+
+
+
+
+JWT token - spring learning page 15
+In its compact form, JSON Web Tokens consist of three parts separated by dots (.), which are:
+
+Header
+Payload
+Signature
+
+
+service Discovery - spring learning page 21
+
+
+Api gateway - spring learning page 23
+
+
+which repository to use for pagination JPA
+
+
+
+can we extend String class - In Java, the String class is final, which means it cannot be extended or subclassed. This design decision was made to ensure the immutability and security of strings. If you try to create a class that extends String, you will encounter a compilation error.
+
+
+
+which design pattern used
+builder pattern?
+
+try with resources    
+
+
+spring actuator 
+
+
+can we stop server using spring actuator - yes
+
+
+which Http method is idempotent and why?
+
+spring learning page 12
+
+
+ConcurrentHashMap internal working
+
+wait vs. sleep
+
+
+@PathVariable vs. @RequestParam
+
+
+Configuration.properties - spring learning page 11
+
+
+
+runtime and compiletime Polymorphysm
+
+
+string pool
+
+
+arraylist default size - 10
+
+
+
+Hashmap bucket size?
+
+- The size of a HashMap's bucket refers to the number of slots or buckets available in the underlying data structure where key-value pairs are stored.
+
+- HashMap in Java is internally implemented as an array of linked lists, where each element in the array is a "bucket." When you put a key-value pair into a HashMap, the hash code of the key is used to determine which bucket the key-value pair should be placed into.
+
+- The initial capacity of a HashMap is the number of buckets created when the HashMap is constructed. By default, the initial capacity is 16.
+
+
+
+hash collision?
+
+When two different keys produce the same hash code, a collision occurs. This means that the hash function has mapped both keys to the same location in the hash table. When this happens, the hash table needs a strategy to handle collisions and store multiple key-value pairs at the same location.
+
+Collision Resolution: 
+
+Separate Chaining: Each bucket in the hash table stores a linked list of key-value pairs that hash to the same index. When a collision occurs, the new key-value pair is appended to the linked list at the corresponding index.
+Open Addressing: When a collision occurs, the algorithm searches for an alternative location to store the key-value pair within the hash table. This may involve probing the table by trying different locations until an empty slot is found.
+
+
+
+Second round:
+
+ java 8 functional interfaces
+
+ how to get a list of even numbers when given 1-10 list using stream(code)
+
+ set vs. treeset
+
+ can key be null in a map
+
+ hashmap vs concurrent hashmap
+
+eager loading and lazy loading
+
+optional class
+
+Explain following annotations:
+
+- qualifier
+
+- transactional
+
+- component scan
+
+ rest controller vs controller
+
+ how we handle exceptions in spring
+
+ bean scopes - singleton, prototype
+
+ dependency injection ways
+
+ design patterns used in ur project
+
+ know spring security?
+
+ jwt
+
+how to use two databases in spring boot?
+
+how to call other microservice api?
+
+how to set up a database in spring boot?
+
+
+Delloite:
+@Component vs. @Bean
+
+git pull vs. fetch
+
+Thread?
+
+spring boot?
+
+
+Infosys:
+controller vs. restcontroller
+
+how to connect database to spring app
+
+how to write join queries
+
+coding:
+1. given an alphanumeric string, print only digits in decreasing order.
+2. count occurances of each character in a string.
+
+
