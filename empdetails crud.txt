@@ -1,0 +1,35 @@
+dependencies:
+
+lombok - getters & setters, constructors
+postgres driver - Database connectivity
+spring web - REST Api
+Spring Data JPA - sql
+
+
+
+    {
+        "firstName": "ram",
+        "lastName": "raj",
+        "emailId": "ramraj@gmail.com",
+        "dob": "1991-06-01",
+        "mobNumber": 9876543210,
+        "address": "chennai"
+    }
+	
+	{
+        "firstName": "jane",
+        "lastName": "doe",
+        "emailId": "janedoe@gmail.com",
+        "dob": "1990-07-21",
+        "mobNumber": 9875643210,
+        "address": "texas"
+    }
+	
+	{
+      "firstName": "upendra",
+      "lastName": "vagalla",
+      "emailId": "upendravagalla@gmail.com",
+      "dob": "1999-03-22",
+      "mobNumber": 9876543210,
+      "address": "AP"
+   }
