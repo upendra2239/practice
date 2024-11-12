@@ -20,10 +20,10 @@ public class StreamPractice {
 
         String str = "I am Upendra Reddy";
         
-        //max 3 numbers
+        //mix 3 numbers
         numList.stream().sorted().limit(3).forEach(System.out::println);
         
-        //min 3 numbers
+        //max 3 numbers
         numList.stream().sorted(Comparator.reverseOrder()).limit(3)
         .forEach(System.out::println);
         
