@@ -16,8 +16,8 @@ public class LeastPositiveNumberNotPresent {
 		Arrays.sort(arr);
 		int missing = 1;
 
-		for(int n: arr){
-			if(n == missing) missing++;
+		for(int m: arr){
+			if(m == missing) missing++;
 		}
 		System.out.println(missing);
 		
