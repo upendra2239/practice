@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,10 +21,10 @@ public class StreamPractice {
 
         String str = "I am Upendra Reddy";
         
-        //mix 3 numbers
+        //max 3 numbers
         numList.stream().sorted().limit(3).forEach(System.out::println);
         
-        //max 3 numbers
+        //min 3 numbers
         numList.stream().sorted(Comparator.reverseOrder()).limit(3)
         .forEach(System.out::println);
         
@@ -69,23 +70,39 @@ public class StreamPractice {
         int arr[]= {12,19,20,88,00,9};
         
         int max = Arrays.stream(arr).max().orElse(0);
+        System.out.println(max);
+
+        int min = Arrays.stream(arr).min().orElse(0);
+        System.out.println(min);
         
+        List<Integer> evenList = numList.stream().filter(n->n%2==0).collect(Collectors.toList());
         
+        System.out.println(evenList);
         
+        //Mapping Strings to Uppercase
+        List<String> uppercaselst = strList.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
+        System.out.println(uppercaselst);
+
+        //Find First Name
+        Optional<String> nameWithA = strList.stream().filter(s -> s.startsWith("A")).findFirst();
         
+        System.out.println(nameWithA);
         
+        // Sum of Squares
+        List<Integer> nums = Arrays.asList(1,2,3,4,5);
         
+        int sumOfSquares = nums.stream().map(n-> n*n).reduce(0, (a,b)-> a+b);
+        System.out.println(sumOfSquares);
         
+        //Partition by Length
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        Map<Boolean, List<String>> partitionByLength = strList.stream().collect(Collectors.partitioningBy(s -> s.length() > 4));
+        System.out.println(partitionByLength.get(true));
+        System.out.println(partitionByLength.get(false));
+
+        //Maximum number
+        Optional<Integer> maxN = numList.stream().max(Integer::compareTo);
+        System.out.println(maxN);
 	}
 
 }

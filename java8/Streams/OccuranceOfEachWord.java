@@ -16,6 +16,9 @@ public class OccuranceOfEachWord {
 		            "World of Java"
 		        );
 		 
+		 String str ="hello";
+		
+		 
 		 Map<String, Long> wordCount = lines.stream()
 				 .flatMap(line -> Arrays.stream(line.split(" ")))
 				 .map(String::toLowerCase)
