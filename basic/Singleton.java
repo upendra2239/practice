@@ -10,7 +10,7 @@ public class Singleton {
 		
 	}
 	
-	private static Singleton getInnstance() {
+	public static Singleton getInnstance() {
 		if(instance == null) {
 			synchronized (Singleton.class) {
 				if(instance == null) {

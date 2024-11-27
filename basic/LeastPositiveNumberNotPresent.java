@@ -12,14 +12,26 @@ public class LeastPositiveNumberNotPresent {
 		int arr[] = {-3,-1,0,3,1,2,7,6,5,4,10};
 		
 		int n =arr.length;
-
-		Arrays.sort(arr);
-		int missing = 1;
-
-		for(int m: arr){
-			if(m == missing) missing++;
+		
+		Set<Integer> leastPositive = new HashSet<Integer>();
+		
+		for(int a: arr) {
+			if(a > 0) {
+				leastPositive.add(a);
+				
+			}
 		}
-		System.out.println(missing);
+		int flag=1;
+		for(Integer i: leastPositive) {
+			System.out.println(i);
+			if(flag++ != i) {
+				flag--;
+				break;
+			}
+			
+		}
+		System.out.println(flag);
+
 		
 	}
 
