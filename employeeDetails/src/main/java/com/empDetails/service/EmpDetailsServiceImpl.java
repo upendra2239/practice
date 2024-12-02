@@ -34,11 +34,17 @@ public class EmpDetailsServiceImpl implements EmpDetailsService {
 		repository.deleteById(id);
 		return "Employee details with id:"+id+" removed!!";
 	}
-	
+	firstName;
+	private String lastName;
+	private String emailId;
+	private Date dob;
+	private long mobNumber;
+	private String address;
 	//updates employee details using id
 	public EmployeeDetails updateEmpDetails(EmployeeDetails employeeDetails) {
 		
 		EmployeeDetails existingEmployeeDetails = repository.findById(employeeDetails.getId()).orElse(employeeDetails);
+		existingEmployeeDetails.setFirstName(employeeDetails.getFirstName());
 		
 		return repository.save(existingEmployeeDetails);
 }
