@@ -1,24 +1,4 @@
 
-project flow:
-
-Axon sends events from frontend 
-event handlers consumes this events
-service sends data in jason format to elastic db
-
-a report of total transactions happended in the day will be generated
-
-Challenge i faced:
-
-we used to get data for eo class using  Select * from the table
-this caused timeouts while dealing with retrieval of large records
-so, I have written a DAO interface to get only the required columns
-this reduced the record retrieval time
-
-
-
-
-
-
 git rebase - allows you to move or combine a sequence of commits to a new base commit.
 
 
@@ -77,8 +57,6 @@ Purpose: Used to annotate methods or classes to indicate that a transaction boun
 
 
 Spring controller with all methods and endpoints:
-
-https://chatgpt.com/c/6719f179-c40c-8010-8181-779567474fd4
 
 
 
@@ -247,6 +225,8 @@ Delloite:
 git pull vs. fetch
 
 Thread?
+
+deadlock code
 
 spring boot?
 
